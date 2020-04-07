@@ -1,0 +1,86 @@
+body {
+  font-family: Arial;
+  margin: 0px; 
+}
+.general {
+  display: block;
+  width: 800px;
+  /*background: lightblue;*/
+}
+.header {
+  width: 700px;
+  /*background: gray;*/
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.image {
+  width: 140px;
+  height: 180px;
+  margin: auto;
+  background: url(/bg/gerb.png) no-repeat;
+  /*background-color: red;*/
+  background-size: 140px;
+}
+.intro {
+  text-align: center;
+}
+span {
+  font-size: 18pt;
+  font-weight: bold;
+}
+.icons {
+  width: 24px;
+  height: 24px;
+  margin: auto;
+}
+#ok {
+  background: url(/bg/ok.png) no-repeat;
+  background-size: 24px;
+}
+#not {
+  background: url(/bg/not.png) no-repeat;
+  background-size: 24px;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+
+tr:nth-child(2n) {
+  background: #E0E0E0;
+} 
+tr:nth-child(2n+1) {
+  background: #F7F7F7;
+}
+tr:hover {
+  background: #BDDBFF; 
+}
+tr:nth-child(1) {
+  height: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background: #8C8C8C;
+}
+td {
+  vertical-align: middle;
+  border: 1px solid #474747;
+}
+td:nth-child(1) {
+  min-width: 30px;
+}
+td:nth-child(2) {
+  font-style: italic;
+  min-width: 70px;
+  text-align: center;
+}
+td:nth-child(3) {
+  min-width: 300px;
+  padding: 0px 10px;
+}
+tr:nth-child(1) td {
+  font-style: normal;
+}

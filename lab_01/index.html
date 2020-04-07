@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CG LAB_01 OVCHAROV</title>
+	<style>
+		#figure {
+			background-image: url(sprite/city.jpg); /* Фон элемента <canvas>. */
+		}
+		#basket { /* Параметры изображения баскетбольного щита. */ 
+			position: absolute;
+			left: 800px;
+			top: 200px;
+		}
+	</style>
+</head>
+<body>
+	<!-- Добавление изображение баскетбольного щита. -->
+	<img id='basket' src="sprite/basket.png" width="150"> 
+
+	<!-- Элемент <canvas>.<canvas>, добавленный в HTML5, предназначен для создания графики с помощью JavaScript. -->
+	<canvas id='figure' width="1024" height="500"/> 
+
+	<script>
+		// Создаем ссылку на элемент <canvas>.
+		var example = document.getElementById("figure");
+		// Определяем тип отрисовки изображения (двумерный).
+		ctx = example.getContext('2d');
+		// Устанавливаем цвет блока (мяча).
+		ctx.fillStyle = 'orange';
+		// Начальные координаты "мяча".
+		var x = -50;
+		var y = 325;
+		// Метод setInterval запускает выполнение функции и регулярно повторяет её через указанный интервал времени. 
+		setInterval( function() {
+			// Метод clearRect стирает область 50х50 в координатах x и y.
+			ctx.clearRect(x, y, 50, 50);
+				if( x <= 260 ) {
+					x += 2;
+					y -= 1;
+				} else {
+					if ( x > 260 && x <= 580 ) {
+						x += 2;
+					} else if ( x > 580 && x <= 815 ) {
+						x += 2;
+						y += 1;
+					} else if ( y < 600 ) {
+						y += 2;
+					} else {
+						x = -50;
+						y = 325;
+					}
+				}
+				// Метод fillRect рисует область 50х50 в координатах x и y.
+				ctx.fillRect(x, y, 50, 50);
+			}, 5 );
+
+	</script>
+</body>
+</html>
